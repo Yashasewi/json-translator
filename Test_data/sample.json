@@ -1,0 +1,22 @@
+{
+    "welcome": "Welcome to our application",
+    "greeting": "Hello, how are you today?",
+    "buttons": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete"
+    },
+    "messages": {
+        "success": "Operation completed successfully",
+        "error": "An error occurred",
+        "warning": "Warning: This action cannot be undone"
+    },
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+        "settings": "Settings"
+    },
+    "test": "This is a test for new key",
+    "test2": "This is a test for new key2"
+}

@@ -1,0 +1,48 @@
+{
+    "app": {
+        "name": "My Application",
+        "version": "1.0.0",
+        "settings": {
+            "theme": {
+                "light": {
+                    "primary": "blue",
+                    "secondary": "gray",
+                    "text": "dark"
+                },
+                "dark": {
+                    "primary": "purple",
+                    "secondary": "black",
+                    "text": "light"
+                }
+            },
+            "notifications": {
+                "email": {
+                    "enabled": true,
+                    "frequency": "daily",
+                    "templates": {
+                        "welcome": "Welcome to our application!",
+                        "reminder": "Don't forget to check your tasks"
+                    }
+                },
+                "push": {
+                    "enabled": true,
+                    "messages": {
+                        "new_message": "You have a new message",
+                        "new_follower": "Someone started following you"
+                    }
+                }
+            }
+        },
+        "messages": {
+            "errors": {
+                "not_found": "Resource not found",
+                "unauthorized": "You are not authorized to perform this action"
+            },
+            "success": {
+                "created": "Resource created successfully",
+                "updated": "Resource updated successfully",
+                "deleted": "Resource deleted successfully"
+            }
+        }
+    }
+}
