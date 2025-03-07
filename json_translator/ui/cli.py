@@ -87,19 +87,24 @@ def get_target_languages(args):
     else:
         # Multi-select language prompt
         console.print(Text("\nAvailable languages:", style="bold cyan"))
+        console.print(f"  0. [bold green]All languages[/bold green]")
         for i, lang in enumerate(available_languages):
             console.print(f"  {i+1}. {lang}")
         
         language_input = Prompt.ask(
-            Text("\nEnter target language codes (comma-separated) or numbers from the list", style="bold cyan"),
+            Text("\nEnter target language codes (comma-separated), numbers from the list, or 0 for all languages", style="bold cyan"),
             default="fr"
         )
         
         # Process the input - handle both language codes and numbers
         target_languages = []
         for item in [lang.strip() for lang in language_input.split(',')]:
+            # Check if the input is "0" for all languages
+            if item == "0":
+                target_languages = available_languages.copy()
+                break
             # Check if the input is a number
-            if item.isdigit():
+            elif item.isdigit():
                 index = int(item) - 1  # Convert to 0-based index
                 if 0 <= index < len(available_languages):
                     target_languages.append(available_languages[index])

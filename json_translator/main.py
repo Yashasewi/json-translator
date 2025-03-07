@@ -116,7 +116,7 @@ def main():
             
             saved_files = []
             for lang, translated_data in translations.items():
-                output_file = f"{output_dir}/translated_{lang}.json"
+                output_file = f"{output_dir}/{lang}.json"
                 success = save_json_file(translated_data, output_file)
                 
                 if success:
