@@ -18,27 +18,37 @@ def get_language_name(code):
         str: Full language name
     """
     language_names = {
-        "fr": "French",
-        "es": "Spanish",
-        "de": "German",
-        "it": "Italian",
-        "ja": "Japanese",
-        "ko": "Korean",
-        "zh": "Chinese (Simplified)",
-        "zh-TW": "Chinese (Traditional)",
-        "ru": "Russian",
-        "pt": "Portuguese",
+        "en": "English",
+        "id": "Bahasa Indonesia",
+        "ms": "Bahasa Melayu",
+        "cs": "Čeština",
+        "da": "Dansk",
+        "de": "Deutsch",
+        "es": "Español",
+        "fil": "Filipino",
+        "fr": "Français",
+        "hr": "Hrvatski",
+        "it": "Italiano",
+        "nl": "Nederlands",
+        "no": "Norsk",
+        "pl": "Polski",
+        "pt": "Português",
+        "pt-BR": "Português (Brasileiro)",
+        "ro": "Romanian",
+        "sr": "Србија",
+        "ru": "Русский",
+        "fi": "Suomi",
+        "sv": "Svenska",
+        "tr": "Türkçe",
+        "vi": "Tiếng Việt",
+        "th": "ไทย",
+        "el": "Ελληνικά",
+        "ko": "한국어",
+        "ja": "日本語",
+        "zh": "中文",
+        "zh-TW": "繁體中文",
         "ar": "Arabic",
         "hi": "Hindi",
-        "nl": "Dutch",
-        "sv": "Swedish",
-        "fi": "Finnish",
-        "da": "Danish",
-        "no": "Norwegian",
-        "pl": "Polish",
-        "tr": "Turkish",
-        "th": "Thai",
-        "vi": "Vietnamese",
     }
     return language_names.get(code, f"Language code: {code}")
 
@@ -53,8 +63,9 @@ def is_valid_language_code(code):
         bool: True if valid, False otherwise
     """
     valid_languages = {
-        "fr", "es", "de", "it", "ja", "ko", "zh", "zh-TW", "ru", "pt", 
-        "ar", "hi", "nl", "sv", "fi", "da", "no", "pl", "tr", "th", "vi",
+        "en", "id", "ms", "cs", "da", "de", "es", "fil", "fr", "hr", "it",
+        "nl", "no", "pl", "pt", "pt-BR", "ro", "sr", "ru", "fi", "sv", "tr",
+        "vi", "th", "el", "ko", "ja", "zh", "zh-TW", "ar", "hi"
         # Add more language codes as needed
     }
     return code in valid_languages
@@ -67,8 +78,9 @@ def get_available_languages():
         list: List of supported language codes
     """
     return [
-        "fr", "es", "de", "it", "ja", "ko", "zh", "zh-TW", "ru", "pt", 
-        "ar", "hi", "nl", "sv", "fi", "da", "no", "pl", "tr", "th", "vi"
+        "en", "id", "ms", "cs", "da", "de", "es", "fil", "fr", "hr", "it",
+        "nl", "no", "pl", "pt", "pt-BR", "ro", "sr", "ru", "fi", "sv", "tr",
+        "vi", "th", "el", "ko", "ja", "zh", "zh-TW", "ar", "hi"
     ]
 
 
